@@ -264,3 +264,22 @@
 // }
 
 // console.log('Total: ', total)
+
+
+
+
+
+
+
+
+
+// Скрипт, который выводит в консоль имя и телефонный номер пользователя. В переменных `names` и `phones` хранятся строки имен и номеров, разделенные запятыми. Порядковый номер имен и телефонов в строках указывают на соответствие. Кол-во иимен и телефонов одинаково
+
+
+const names = 'Jacob,William,Solomon,Artemis';
+const phones= '89001234567,89001112233,890055566377,890055566300';
+const namesArr = names.split(',');
+const phonesArr = phones.split(',');
+
+console.log(namesArr);
+console.log(phonesArr);

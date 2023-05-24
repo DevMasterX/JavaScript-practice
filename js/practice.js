@@ -16,16 +16,14 @@
 // } else {
 //   console.log('Я вас не знаю!');
 // }
-
-
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
 
 // При завантаженні сторінки користувачу пропонується у prompt ввести число.
 //     Те, що вводить користувач, додається до значення змінної total.
@@ -48,20 +46,19 @@
 // }
 
 // alert(`summ of number: ${total}`);
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
 
 // Скрипт, который считает сумму элементов двух массивов
 
 // const array1 = [5, 10, 15, 20];
 // const array2 = [10, 20, 30, 100, 12];
-// let total = 0; 
+// let total = 0;
 
 // const numbers = array1.concat(array2);
 
@@ -69,25 +66,27 @@
 //     total += number;
 // }
 // console.log(total);
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-
-// Карточки в Trello 
+// Карточки в Trello
 // Метод Splice()
 // Удалить
 // Добавить
 // Обновить
 
 // const cards = [
-//     'Карточка-1', 
-//     'Карточка-2', 
-//     'Карточка-3', 
-//     'Карточка-4', 
+//     'Карточка-1',
+//     'Карточка-2',
+//     'Карточка-3',
+//     'Карточка-4',
 //     'Карточка-5'
 // ]
 // console.table(cards);
@@ -101,9 +100,7 @@
 
 // console.table(cards);
 
-
 // Добавление (по индексу)
-
 
 // const cardToInsert = 'Карточка-6';
 // const index = 3;
@@ -111,9 +108,7 @@
 // cards.splice(index, 0, cardToInsert);
 // console.table(cards);
 
-
 // Обновление (по индексу)
-
 
 // const cardToUpdate = 'Карточка-4';
 // const index = cards.indexOf(cardToUpdate);
@@ -122,14 +117,16 @@
 
 // console.table(cards);
 
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-
-
-
-
-
-// Делаем Slug в URL из названия статьи 
+// Делаем Slug в URL из названия статьи
 // Заголовок состоит только из букв и пробелов
 
 // -нормаоизируем строку
@@ -142,18 +139,19 @@
 // const slug = title.toLowerCase().split(' ').join('-');
 
 // console.log(slug);
-
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Скрипт поиска самого маленького числа в массиве
 // при условии, что числа не повторяются
-
 
 // const numbers = [51, 18, 13, 24, 7, 2, 19];
 // let smallestNumber = numbers[0];
@@ -164,10 +162,17 @@
 //     }
 // }
 // console.log('Smallest number: ',  smallestNumber);
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Поиск логина (несколько способов)
 // - если логина нет, вывести сообщение 'Пользователь [логин] не найден'
@@ -190,7 +195,6 @@
 
 // console.log(message);
 
-
 // - через for...of
 
 // const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
@@ -210,9 +214,7 @@
 
 // console.log(message);
 
-
 // -метод includes с тернарным оператором
-
 
 // const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
 // const loginToFind = 'poly1scute';
@@ -220,33 +222,40 @@
 // const message = logins.includes(loginToFind) ? `Пользователь ${loginToFind}  найден` :  `Пользователь ${loginToFind} не найден`;
 
 // console.log(message);
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Посчитать общую сумму покупок в корзине
 
 // const cart = [54, 28, 105, 70, 92, 17, 120];
 // let total = 0;
-// // 1) Перебрать массив
+// 1) Перебрать массив
 // for(let i = 0; i < cart.length; i += 1) {
 //     console.log(cart[i]);
 
 //     total += cart[i];
 // }
 // console.log('Total: ', total);
-// // 2)сделать переменную total до цикла
-// // 3)каждый элемент приплюсовать к total
-
-
-
-
-
-
+// 2)сделать переменную total до цикла
+// 3)каждый элемент приплюсовать к total
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Посчитать сумму всех четных чисел в массиве
 
@@ -265,21 +274,87 @@
 
 // console.log('Total: ', total)
 
-
-
-
-
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Скрипт, который выводит в консоль имя и телефонный номер пользователя. В переменных `names` и `phones` хранятся строки имен и номеров, разделенные запятыми. Порядковый номер имен и телефонов в строках указывают на соответствие. Кол-во иимен и телефонов одинаково
 
+// const names = 'Jacob,William,Solomon,Artemis';
+// const phones = '89001234567,89001112233,890055566377,890055566300';
+// const namesArr = names.split(',');
+// const phonesArr = phones.split(',');
 
-const names = 'Jacob,William,Solomon,Artemis';
-const phones= '89001234567,89001112233,890055566377,890055566300';
-const namesArr = names.split(',');
-const phonesArr = phones.split(',');
+// for (let i = 0; i < namesArr.length; i += 1) {
+//   console.log(`${namesArr[i]}: ${phonesArr[i]}`);
+// }
 
-console.log(namesArr);
-console.log(phonesArr);
+// console.log(namesArr);
+// console.log(phonesArr);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// Напиши скрипт, который выводит в консоль все слова строки, кроме первого и последнего.Скрипт должен работать для любой строки
+
+// const string = 'Welcome to the future';
+
+// const wordsArr = string.split(' ');
+// const newWordsArr = wordsArr.slice(1, wordsArr.length - 1);
+
+// console.log(newWordsArr.join(' '));
+
+// Скрипт, который; разворачивает; строку(обратный, порядок, букв); и; выводит; ее; в; консоль
+
+// const string = 'Welcome to the future';
+
+// console.log(string.split('').reverse().join(''));
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Сортировка массива с циклом
+// Скрипт сортировки массива строк в алфавитном порядке по первой букве элемента
+
+// const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
+
+// for (let i = 0; i < langs.length; i += 1) {
+//   // сравниваем текущий элемент с другими элементами массива
+//   for (let j = i + 1; j < langs.length; j += 1) {
+// меняем элементы местами
+//     if (langs[i] > langs[j]) {
+//       const thirdValue = langs[i];
+//       langs[i] = langs[j];
+//       langs[j] = thirdValue;
+//     }
+//   }
+// }
+// console.log(langs);
+//
+//
+//
+//
+//
+//
+//

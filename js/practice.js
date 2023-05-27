@@ -340,7 +340,7 @@
 // const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
 
 // for (let i = 0; i < langs.length; i += 1) {
-//   // сравниваем текущий элемент с другими элементами массива
+// сравниваем текущий элемент с другими элементами массива
 //   for (let j = i + 1; j < langs.length; j += 1) {
 // меняем элементы местами
 //     if (langs[i] > langs[j]) {
@@ -351,6 +351,107 @@
 //   }
 // }
 // console.log(langs);
+//
+//
+//
+//
+//
+//
+//
+// Напиши функцию calculateTotalPrice(items)
+// которая принимает массив цен (чисел) и возвращает их сумму
+//
+// const calculateTotalPrice = function (items) {
+//   console.log('items внутри функции: ', items);
+//
+//   let total = 0;
+//
+//   for (const item of items) {
+//     total += item;
+//   }
+//
+//   return total;
+// };
+//
+// console.log(calculateTotalPrice([1, 2, 3]));
+// console.log(calculateTotalPrice([5, 10, 15, 20]));
+// console.log(calculateTotalPrice([100, 200, 300]));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// Напиши функцию logItems(items) для перебора и логирования массива
+//
+// const logItems = function (items) {
+//   for (const item of items) {
+//     console.log(item);
+//   }
+// };
+//
+// logItems(['Mango', 'Kiwi', 'Poly', 'Ajax']);
+// logItems([1, 2, 3, 4, 5]);
+// logItems(['клавиатура', 'наушники', 'часы']);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//напиши функцию findLogin(allLogins, login) для поиска логина
+// - если логина нет, вывести сообщение 'Пользователь [логин] не найден'
+// - если нашли, вывести сообщение 'Пользователь [логин] найден'
+//
+// const logins = ['m4ngoDoge', 'k1widab3st', 'poly1scute', 'aj4xth3m4n'];
+// const findLogin = function (allLogins, loginToFind) {
+//   return allLogins.includes(loginToFind)
+//     ? `Пользователь ${loginToFind} найден`
+//     : `Пользователь ${loginToFind} не  найден`;
+// };
+
+// console.log(findLogin(logins, 'avocod3r'));
+// console.log(findLogin(logins, 'kiwidab3st'));
+// console.log(findLogin(logins, 'jam4l'));
+// console.log(findLogin(logins, 'poly1scute'));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// напиши функцию findSmallestNumber(numbers) для поиска самого  маленького числа в массиве
+// при условии, что числа уникальные (не повторяются)
+// const findSmallestNumber = function (numbers) {
+//   let smallestNumber = numbers[0];
+//
+//   for (const number of numbers) {
+//     if (number < smallestNumber) {
+//       smallestNumber = number;
+//     }
+//   }
+//   return smallestNumber;
+// };
+//
+// console.log(findSmallestNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallestNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallestNumber([7, 21, 84, 15, 4]));
+//
+//
 //
 //
 //

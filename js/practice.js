@@ -1444,3 +1444,194 @@
 // console.log(courses);
 // updateCourse('Express', 'NestJS');
 // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+//
+//
+//
+//
+//
+//
+//------------------------  ОБЪЕКТЫ --------
+//
+//
+//
+// const playlist = {
+//   name: 'Мой супер плейлист',
+//   rating: 5,
+//   tracks: ['track-1', 'track-2', 'track-3'],
+//   trackCount: 3,
+//   changeName(newName) {
+//     console.log(this);
+//     this.name = newName;
+//   },
+//   addTrack(track) {
+//     this.tracks.push(track);
+//     this.trackCount = this.tracks.length;
+//   },
+//   updateRating(newRating) {
+//     this.rating = newRating;
+//   },
+// };
+// playlist.changeName('новое имя');
+// playlist.addTrack('new-Track');
+// playlist.addTrack('new-Track1');
+// playlist.updateRating(6);
+
+// console.log(playlist);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+
+// let totalFeedback = 0;
+
+// // ---------массив ключей--------
+// const keys = Object.keys(feedback);
+
+// console.log(keys);
+
+// for (const key of keys) {
+//   console.log(key);
+//   console.log(feedback[key]);
+
+//   totalFeedback += feedback[key];
+// }
+
+// console.log('totalFeedback: ', totalFeedback);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// const feedback = {
+//   good: 5,
+//   neutral: 10,
+//   bad: 3,
+// };
+
+// let totalFeedback = 0;
+// // ---------массив значений--------
+// const values = Object.values(feedback);
+
+// console.log(values);
+
+// for (const value of values) {
+//   console.log(value);
+
+//   totalFeedback += value;
+// }
+
+// console.log('totalFeedback: ', totalFeedback);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// --------------------массив объектов--------
+//
+// const friends = [
+//   { name: 'Mango', online: false },
+//   { name: 'Kiwi', online: true },
+//   { name: 'Poly', online: true },
+//   { name: 'Ajax', online: false },
+// ];
+
+// console.table(friends);
+
+// for (const friend of friends) {
+//   console.log(friend.online);
+//   friend.newport = 555;
+// }
+
+// console.table(friends);
+//
+//
+//
+//
+//
+//
+//
+//
+
+const friends = [
+  { name: 'Mango', online: false },
+  { name: 'Kiwi', online: true },
+  { name: 'Poly', online: true },
+  { name: 'Ajax', online: false },
+];
+
+console.table(friends);
+
+// -------------ищем друга по имени---------------
+
+// const findFriendByName = function (allFriends, name) {
+//   for (const friend of allFriends) {
+//     // console.log(friend);
+//     // console.log(friend.name);
+
+//     if (friend.name === name) {
+//       return 'Нашли!!!!!!!!!';
+//     }
+//   }
+//
+//   return 'Не Нашли (((';
+// };
+//
+// console.log(findFriendByName(friends, 'Poly'));
+// console.log(findFriendByName(friends, 'Chelsy'));
+//
+// -------------получаем имена всех друзей---------------
+//
+// const getAllNames = function (allfriends) {
+//   const names = [];
+
+//   for (const friend of allfriends) {
+//     console.log(friend.name);
+
+//     names.push(friend.name);
+//   }
+//   return names;
+// };
+// //
+// console.log(getAllNames(friends));
+//
+//
+// -------------получаем имена друзей, которые онлайн---------------
+//
+//
+const getOnlineFriends = function (allfriends) {
+  const onlineFriends = [];
+
+  for (const friend of allfriends) {
+    console.log(friend);
+    console.log(friend.online);
+
+    if (friend.online) {
+      onlineFriends.push(friend);
+    }
+  }
+  return onlineFriends;
+};
+
+console.log(getOnlineFriends(friends));

@@ -1636,10 +1636,10 @@ console.table(friends);
 
 // console.log(getOnlineFriends(friends));
 
-// 
+//
 // -------------получаем имена друзей, которые оффлайн---------------
-// 
-// 
+//
+//
 // const getOfflineFriends = function (allFriends) {
 //     const offlineFriends = [];
 
@@ -1655,3 +1655,28 @@ console.table(friends);
 // };
 
 // console.log(getOfflineFriends(friends));
+//
+//
+//  -------------получаем объект друзей по статусу оффлайн\онлайн---------------
+//
+//
+const getFriendsByOnlineStatus = function (allFriends) {
+  const friendsByStatus = {
+    online: [],
+    offline: [],
+  };
+
+  for (const friend of allFriends) {
+    if (friend.online) {
+      friendsByStatus.online.push(friend);
+
+      continue;
+    }
+
+    friendsByStatus.offline.push(friend);
+  }
+
+  return friendsByStatus;
+};
+
+console.log(getFriendsByOnlineStatus(friends));

@@ -1620,18 +1620,38 @@ console.table(friends);
 // -------------получаем имена друзей, которые онлайн---------------
 //
 //
-const getOnlineFriends = function (allfriends) {
-  const onlineFriends = [];
+// const getOnlineFriends = function (allFriends) {
+//   const onlineFriends = [];
 
-  for (const friend of allfriends) {
-    console.log(friend);
-    console.log(friend.online);
+//   for (const friend of allFriends) {
+//     console.log(friend);
+//     console.log(friend.online);
 
-    if (friend.online) {
-      onlineFriends.push(friend);
-    }
-  }
-  return onlineFriends;
-};
+//     if (friend.online) {
+//       onlineFriends.push(friend);
+//     }
+//   }
+//   return onlineFriends;
+// };
 
-console.log(getOnlineFriends(friends));
+// console.log(getOnlineFriends(friends));
+
+// 
+// -------------получаем имена друзей, которые оффлайн---------------
+// 
+// 
+// const getOfflineFriends = function (allFriends) {
+//     const offlineFriends = [];
+
+//     for (friend of allFriends) {
+//         console.log(friend.online);
+
+//         if (!friend.online) {
+//             offlineFriends.push(friend);
+//         }
+//     }
+
+//     return offlineFriends;
+// };
+
+// console.log(getOfflineFriends(friends));

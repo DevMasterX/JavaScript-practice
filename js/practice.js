@@ -1574,14 +1574,14 @@
 //
 //
 
-const friends = [
-  { name: 'Mango', online: false },
-  { name: 'Kiwi', online: true },
-  { name: 'Poly', online: true },
-  { name: 'Ajax', online: false },
-];
+// const friends = [
+//   { name: 'Mango', online: false },
+//   { name: 'Kiwi', online: true },
+//   { name: 'Poly', online: true },
+//   { name: 'Ajax', online: false },
+// ];
 
-console.table(friends);
+// console.table(friends);
 
 // -------------ищем друга по имени---------------
 
@@ -1660,23 +1660,601 @@ console.table(friends);
 //  -------------получаем объект друзей по статусу оффлайн\онлайн---------------
 //
 //
-const getFriendsByOnlineStatus = function (allFriends) {
-  const friendsByStatus = {
-    online: [],
-    offline: [],
-  };
+// const getFriendsByOnlineStatus = function (allFriends) {
+//   const friendsByStatus = {
+//     online: [],
+//     offline: [],
+//   };
 
-  for (const friend of allFriends) {
-    if (friend.online) {
-      friendsByStatus.online.push(friend);
+//   for (const friend of allFriends) {
+//     if (friend.online) {
+//       friendsByStatus.online.push(friend);
 
-      continue;
-    }
+//       continue;
+//     }
 
-    friendsByStatus.offline.push(friend);
-  }
+//     friendsByStatus.offline.push(friend);
+//   }
 
-  return friendsByStatus;
-};
+//   return friendsByStatus;
+// };
 
-console.log(getFriendsByOnlineStatus(friends));
+// console.log(getFriendsByOnlineStatus(friends));
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// const user = {
+//   name: 'Dima',
+//   // метод обʼєкту
+//   sayHello() {
+//     alert(this.name);
+//   }
+// }
+
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+// console.log(animals.slice(-2));
+// console.log(animals);
+
+// метод масиву push()
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+// animals.push('dog', 'cat');
+// console.log(animals);
+
+// let arr = [];
+// console.log(fillArray(2, 10));
+// function fillArray(min, max) {
+//   for (let i = min; i <= max; i += 2) {
+//     // console.log(i);
+//     // console.log(arr.push(i));
+//     // arr.push(i) повертає довжину масиву
+//     // return припиняє виконання функції (і циклу відповідно) та повертає значення
+//     // return arr.push(i);
+//     // arr.push(i);
+//     // console.log(arr);
+//     // return arr;
+//   }
+// }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+// ----------------------------# Модуль 3. Заняття 1. Об'єкти
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// ## Example 1 - Основи об'єктів
+//
+// Напиши скрипт, який для об'єкта `user`, послідовно:
+//
+// - додає поле `mood` зі значенням `'happy'`
+// - замінює значення `hobby` на `'skydiving'`
+// - замінює значення `premium` на `false`
+// - виводить вміст об'єкта `user` у форматі `ключ:значення` використовуючи
+//   `Object.keys()` та `for...of`
+//
+// const user = {
+//   name: 'Mango',
+//   age: 20,
+//   hobby: 'html',
+//   premium: true,
+// };
+
+// // методи виводу ключів та значень властивостей обʼєкту
+// console.log(user);
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user))
+
+// user.mood = 'happy';
+// // console.log(user);
+//
+// user.hobby = 'skydiving';
+// user.premium = false;
+// console.log(user);
+// delete user.hobby;
+// console.log(user);
+
+// const keysArray = Object.keys(user);
+// // console.log(keysArray);
+//
+// for (const key of keysArray) {
+//   console.log(`${key}: ${user[key]}`)
+// }
+//
+// ## Example 2 - метод Object.values()
+//
+// У нас є об'єкт, де зберігаються зарплати нашої команди. Напишіть код для
+// підсумовування всіх зарплат і збережіть результат у змінній sum. Повинно
+// вийти 390. Якщо об'єкт `salaries` порожній, то результат має бути 0.
+//
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+//
+// function getSalarySum(companySalaries) {
+//   const valuesArr = Object.values(companySalaries);
+//   // if (!valuesArr.length) return 0;
+//   let sum = 0;
+//
+//   for (const value of valuesArr) {
+//     sum += value;
+//   }
+//
+//   return sum;
+// }
+
+// console.log(getSalarySum(salaries));
+
+//
+// ## Example 3 - Масив об'єктів
+//
+// Напишіть функцію `calcTotalPrice(stones, stoneName)`, яка приймає масив
+// об'єктів та рядок з назвою каменю. Функція рахує і повертає загальну вартість
+// каміння з таким ім'ям, ціною та кількістю з об'єкта
+//
+// const stones = [
+//   { name: 'Смарагд', price: 1300, quantity: 4 },
+//   { name: 'Діамант', price: 2700, quantity: 3 },
+//   { name: 'Сапфір', price: 400, quantity: 7 },
+//   { name: 'Щебінь', price: 200, quantity: 2 },
+// ];
+
+// function calcTotalPrice(stonesArr, stoneName) {
+//   for (const stone of stonesArr) {
+//     console.log(stone);
+//
+//     if (stone.hasOwnProperty('name') && stone.name === stoneName) {
+//       console.log('Target stone price: ', stone.price);
+//       return stone.price * stone.quantity;
+//     }
+//   }
+// }
+//
+// console.log(calcTotalPrice(stones, 'Щебінь'));
+
+//
+// ## Example 4 - Комплексні завдання
+//
+// Напиши скрипт управління особистим кабінетом інтернет банку. Є об'єкт `account`
+// в якому необхідно реалізувати методи для роботи з балансом та історією
+// транзакцій.
+//
+// /*
+//  * Типів транзакцій всього два.
+//  * Можна покласти чи зняти гроші з рахунку.
+//  */
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
+
+// let idCounter = 0;
+//
+// /*
+//  * Кожна транзакція це об'єкт із властивостями: id, type та amount
+//  */
+//
+// const account = {
+//   // Поточний баланс рахунку
+//   balance: 0,
+//
+//   // Історія транзакцій
+//   transactions: [],
+//
+//   /*
+//    * Метод створює та повертає об'єкт транзакції.
+//    * Приймає суму та тип транзакції.
+//    */
+//   createTransaction(amount, type) {
+//     idCounter += 1;
+//
+//     // const transactionObj = {
+//     //   id: idCounter,
+//     //   type,
+//     //   amount,
+//     // }
+//     // return transactionObj;
+//
+//     return {
+//       id: idCounter,
+//       type,
+//       amount,
+//     }
+//   },
+//
+//   /*
+//    * Метод, що відповідає за додавання суми до балансу.
+//    * Приймає суму транзакції.
+//    * Викликає createTransaction для створення об'єкта транзакції
+//    * після чого додає його до історії транзакцій
+//    */
+//   deposit(amount) {
+//     // console.log(this);
+//     this.balance += amount;
+//     const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     this.transactions.push(newTransaction);
+//   },
+//
+//   /*
+//    * Метод, що відповідає за зняття суми з балансу.
+//    * Приймає суму транзакції.
+//    * Викликає createTransaction для створення об'єкта транзакції
+//    * після чого додає його до історії транзакцій.
+//    *
+//    * Якщо amount більше ніж поточний баланс, виводь повідомлення
+//    * про те, що зняття такої суми не можливе, недостатньо коштів.
+//    */
+//   withdraw(amount) {
+//     if (amount > this.balance) {
+//       alert('Недостатньо коштів');
+//       return;
+//     }
+//
+//     this.balance -= amount;
+//     const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     this.transactions.push(newTransaction);
+//   },
+//
+//   /*
+//    * Метод повертає поточний баланс
+//    */
+//   getBalance() {
+//     return this.balance;
+//   },
+//
+//   /*
+//    * Метод шукає та повертає об'єкт транзакції по id
+//    */
+//   getTransactionDetails(id) {
+//     for (const transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//   },
+//
+//   /*
+//    * Метод повертає кількість коштів
+//    * певного типу транзакції з усієї історії транзакцій
+//    */
+//   getTransactionTotal(type) {
+//     let total = 0;
+//     for (const transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         total += transaction.amount;
+//       }
+//     }
+//     return total;
+//   },
+// };
+
+// account.deposit(100);
+// account.deposit(1000);
+// account.withdraw(500);
+//
+// console.log(account.getBalance());
+// console.log(account.getTransactionDetails(2));
+//
+// // account.withdraw(1000);
+//
+// console.log(account.getTransactionTotal(Transaction.DEPOSIT));
+// console.log(account.getTransactionTotal(Transaction.WITHDRAW));
+//
+// console.log(account.transactions);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//---------------------Корзина
+//
+// const cart = {
+//   items: [],
+//   getItems() {
+//     return this.items;
+//   },
+//   add(product) {
+//     this.items.push(product);
+//   },
+
+//   remove(productName) {
+//     for (let i = 0; i < this.items.length; i += 1) {
+//       const item = this.items[i];
+
+//       if (productName === item.name) {
+//         console.log('Нашли такой продукт', productName);
+//         console.log(i);
+//         this.items.splice(i, 1);
+//       }
+//     }
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+
+//   countTotalPrice() {
+//     const { items } = this;
+
+//     let total = 0;
+
+//     for (const { price } of items) {
+//       total += price;
+//     }
+//     return total;
+//   },
+//   increaseQuantity() {},
+//   decreaseQuantity() {},
+// };
+
+// console.log(cart.getItems());
+
+// cart.add({ name: '🍎', price: 50 });
+// cart.add({ name: '🍇', price: 60 });
+// cart.add({ name: '🍌', price: 60 });
+// cart.add({ name: '🍋', price: 110 });
+
+// console.table(cart.getItems());
+
+// console.log('Total: ', cart.countTotalPrice());
+
+// cart.remove('🍋');
+// console.table(cart.getItems());
+
+// cart.clear();
+// console.log(cart.getItems());
+// console.log(12);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+//
+//
+//
+//
+//
+//
+// # Модуль 3 Заняття 6. Деструктуризація та rest/spread
+//
+
+//
+//
+//
+//
+
+// ## Example 1 - Деструктуризація
+//
+// Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору
+// незалежних аргументів.
+//
+// const params = {
+//   weight: 10,
+//   height: 20
+// }
+
+// calcBMI(params);
+// function calcBMI({ weight, height }) {
+//   // console.log(params);
+//   // const { weight, height } = params;
+//   const numericWeight = Number(weight.replace(',', '.'));
+//   const numericHeight = Number(height.replace(',', '.'));
+//   return Number((numericWeight / numericHeight ** 2).toFixed(1));
+// }
+//
+// // Раніше було так
+// console.log(calcBMI({
+//   weight: '88,3',
+//   height: '1.75'
+// }));
+// console.log(calcBMI({
+//   weight: '68,3',
+//   height: '1.65'
+// }));
+// console.log(calcBMI({
+//   weight: '118,3',
+//   height: '1.95'
+// }));
+//
+// ## Example 2 - Деструктуризація
+//
+// Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору
+// незалежних аргументів.
+//
+// function printContactsInfo(props) {
+//   const { names, phones } = props;
+//   const nameList = names.split(',');
+//   const phoneList = phones.split(',');
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     console.log(`${nameList[i]}: ${phoneList[i]}`);
+//   }
+// }
+// //
+// // // Раніше було так
+// printContactsInfo({
+//   names: 'Jacob,William,Solomon,Artemis',
+//   phones: '89001234567,89001112233,890055566377,890055566300',
+// });
+//
+//
+// ## Example 3 - Глибока деструктуризація
+//
+// Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору
+// незалежних аргументів.
+//
+// function getBotReport(props) {
+//   const { companyName, bots: { repair: repairBots, defence: defenceBots }} = props;
+//   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
+// }
+// //
+// // Раніше було так
+// // console.log(getBotReport('Cyberdyne Systems', 150, 50));
+//
+// // Очікується
+// console.log(
+//   getBotReport({
+//     companyName: 'Cyberdyne Systems',
+//     bots: {
+//       repair: 150,
+//       defence: 50,
+//     },
+//   }),
+// ); // "Cyberdyne Systems has 200 bots in stock"
+//
+// ## Example 4 - Деструктуризація
+//
+// Напиши функцію так, щоб вона приймала об'єкт параметрів із властивостями
+//   `companyName` та `stock` та виводила репорт про кількість товарів на складі будь-якої
+// компанії.
+//
+
+// function getStockReport(props) {
+//   const { companyName, stock } = props;
+//   let sum = 0;
+//   for (const stockValue of Object.values(stock)) { // масив чисел
+//     sum += stockValue;
+//   }
+//   return `${companyName} has ${sum} items in stock!`;
+// }
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Cyberdyne Systems',
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   }),
+// ); // "Cyberdyne Systems has 200 items in stock"
+
+// console.log(
+//   getStockReport({
+//     companyName: 'Belacci',
+//     stock: {
+//       shoes: 20,
+//       skirts: 10,
+//       hats: 5,
+//     },
+//   }),
+// ); // "Belacci has 35 item in stock"
+//
+// ## Example 5 - Операція spread
+//
+// Доповни функцію `createContact(partialContact)` так, щоб вона повертала новий
+// об'єкт контакту з доданими властивостями `id` та `createdAt`, а також `list` зі
+// значенням "default" якщо в `partialContact` немає такої властивості.
+//
+
+// let contactId = 0;
+// function createContact(props) {
+//   contactId += 1;
+//
+//   return {
+//     list: 'default',
+//     ...props,
+//     id: contactId,
+//     createdAt: Date.now(),
+//   }
+// }
+
+// console.log(
+//   createContact({
+//     name: 'Mango',
+//     email: 'mango@mail.com',
+//     list: 'friends',
+//   }),
+// );
+// console.log(
+//   createContact({
+//     name: 'Poly',
+//     email: 'poly@hotmail.com',
+//   }),
+// );
+//
+// ## Example 6 - Операція rest
+//
+// Напиши функцію `transformUsername(user)` так, щоб вона повертала новий об'єкт із властивістю
+//   `fullName`, замість `firstName` та `lastName`.
+//
+
+// function transformUsername(user) {
+//   const { firstName, lastName, ...otherParams } = user;
+//   console.log('Other Params: ', otherParams);
+//   const fullName = `${firstName} ${lastName}`;
+//
+//   return {
+//     fullName,
+//     ...otherParams
+//   }
+// }
+
+// console.log(
+//   transformUsername({
+//     id: 1,
+//     firstName: 'Jacob',
+//     lastName: 'Mercer',
+//     email: 'j.mercer@mail.com',
+//     friendCount: 40,
+//   }),
+// );
+
+// console.log(
+//   transformUsername({
+//     id: 2,
+//     firstName: 'Adrian',
+//     lastName: 'Cross',
+//     email: 'a.cross@hotmail.com',
+//     friendCount: 20,
+//   }),
+// );
+
+// const arr1 = [1,2,3,4];
+// const arr2 = [5,6,7,8];
+// console.log([...arr1, 333, ...arr2]);

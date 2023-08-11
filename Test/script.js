@@ -1,43 +1,75 @@
-// const scrollElem = document.querySelector ('.scroll');
-// const scrollValueElem = document.querySelector('.scroll-value')
 
-// const throttleHandler = _.throttle(setScrollValue, 500)
-// scrollElem.addEventListener('scroll', throttleHandler, {leading: false});
+// --------------------------------ОПОВЕЩЕНИЕ
 
-// function setScrollValue (event) {
-//     scrollValueElem.textContent = `${Math.ceil(scrollElem.scrollTop)}px`
+// const refs = {
+//     notification: document.querySelector('.js-alert')
+// };
+
+// const notification_delay = 3000;
+// let timeoutId = null;
+
+// refs.notification.addEventListener('click', onNotificationClick);
+
+// showNotification();
+
+// function onNotificationClick() {
+//     hideNotification();
+//     clearTimeout(timeoutId);
 // }
 
+// function showNotification() {
+//     refs.notification.classList.add('is-visible');
 
-// const inputElem = document.querySelector('input');
-// const searchValueElem = document.querySelector ('.search-value')
+//     timeoutId = setTimeout(() => {
+//         console.log('Закрываем алерт автоматически, чтобы не висел');
+//         hideNotification();
+//     }, notification_delay)
+// };
 
-// const debounceHandler = _.debounce(setSearchValue, 500, {maxWait: 2000})
-
-// inputElem.addEventListener('input', debounceHandler)
-
-// function setSearchValue() {
-//     searchValueElem.textContent = inputElem.value;
+// function hideNotification() {
+//     refs.notification.classList.remove('is-visible')
 // }
+//
+//
+//
+//
+//
+//
+//------------------------- НАДОЕДАЛКА
 
+// const PROMPT_DELAY = 1000;
+// const MAX_PROMPT_ATTEMPTS = 3;
 
+// let promptCounter = 0;
+// let hasSubscribed = false;
 
-const loginElem = document.querySelector('input[name="login"]');
-const passwordElem = document.querySelector('input[name="password"]')
+// const intervalID = setInterval(() => {
+//     if (promptCounter === MAX_PROMPT_ATTEMPTS  || hasSubscribed) {
+//         console.log('Останавливаем интервал');
+//         clearInterval(intervalID)
+//         return;
+//     }
+//     console.log('Подпишись на рассылку! -' + Date.now());
+//     promptCounter += 1;
+// }, PROMPT_DELAY);
+//
+//
+//
+//
+//
+//
+//
+//
 
-const debounceHandler = _.debounce(checkValidation, 300)
+let count = 0;
 
-loginElem.addEventListener('input', debounceHandler)
-passwordElem.addEventListener('input', debounceHandler)
-
-function checkValidation(event) { 
-    console.log(event);
-    console.log(event.target.name);
-    
-    if (event.target.name === 'login' && event.target.value.length < 10) {
-        loginElem.nextElementSibling.textContent = 'filed length must be min 10 chars'
-    } else { 
-        loginElem.nextElementSibling.textContent = '';
+function showMessage() { 
+    count++;
+    console.log('A' + count);
+    if (count < 3) { 
+        setTimeout(showMessage, 1000)
     }
-
 }
+
+showMessage();
+

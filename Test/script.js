@@ -59,15 +59,3 @@
 //
 //
 //
-
-let count = 0;
-
-function showMessage() {
-  count++;
-  console.log('A' + count);
-  if (count < 3) {
-    setTimeout(showMessage, 1000);
-  }
-}
-
-showMessage();

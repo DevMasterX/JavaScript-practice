@@ -59,3 +59,14 @@
 //
 //
 //
+function sayHello( name, city, state ) {
+  const fullName = name.join(' ');
+  const wellcomePerson = `Hello, ${name}! Welcome to ${city}, ${state}!`
+  return wellcomePerson;
+}
+const name = ['John', 'Smith'];
+const city = 'Phoenix';
+const state = 'Arizona';
+
+const message = sayHello(name, city, state);
+console.log(message);
